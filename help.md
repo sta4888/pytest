@@ -110,11 +110,34 @@ pytest .\f2_class_test.py::TestClass::test_cube
 )`
 
 
+
+
+## Fixtures
+```
+@pytest.fixture
+def initial_value():
+    return 5
+    
+# и передача в тестовую функцию
+
+def test_square(initial_value):
+    result = square(initial_value)
+    assert result == initial_value ** 2
+```
+автоматический запуск `autouse=True`
+область видимости `scope="module", scope="class", scope="session"`
+
+
+
+
+
 ### FLAGS
 `-vrsx`
 `-collectonly`
 `pytest --collectonly .\l3_skip.py`
 `-k`
+`-s`
+`pytest --fixtures`
 
 888888888888888888888888888888888888888
 # Запуск отдельных файлов, функций, классов

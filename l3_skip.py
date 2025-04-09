@@ -91,3 +91,4 @@ def test_square8(num, ref):
 def test_square9(base, exponent):
     result = square(base)
     assert result == exponent
+
