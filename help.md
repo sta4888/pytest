@@ -129,6 +129,10 @@ def test_square(initial_value):
 
 
 
+## Файл конфигурации Pytest conftest
+обычные фикстуры в этом файле
+
+
 
 
 ### FLAGS
